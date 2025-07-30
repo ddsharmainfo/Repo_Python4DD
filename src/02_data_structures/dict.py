@@ -1,26 +1,50 @@
+# --------------------------------------------------
+# Dictionaries in Python – Ordered vs Unordered
+# Starting from Python 3.7, dictionaries are ordered, meaning they keep the order in which keys are added.
+# In Python 3.6 and earlier, dictionaries are unordered, so the order of keys is not guaranteed.
+
+# Key Differences:
+# Ordered dictionary keeps the order of key insertion.
+#Unordered dictionary does not keep track of the order.
+
+# You can:
+# Use dictionary unpacking to access keys and values separately.
+# Traverse a dictionary (loop through it).
+# But dictionaries are not index-based, meaning you can't access items by position like a list.
+# --------------------------------------------------
+
 """
-Welcome to python learning
-    
-    Following dict methods are illustrated
-        clear
-        copy
-        fromkeys
-        get
-        items
-        keys
-        pop
-        popitem
-        update
-        values
+Following dict methods are illustrated
+    clear
+    copy
+    fromkeys
+    get
+    items
+    keys
+    pop
+    popitem
+    update
+    values
 """
 
-# declaring a dictionary
-colordict = {'r':'RED', 'g':'GREEN', 'b':'BLUE'}
-print(colordict)
+# unpacking a dictionary
+print('\n unpacking a dictionary')
+dict1 = {1: 'DD', 2: 'Sharma', 3: 'Gwalior'}
+for x, y in dict1.items():
+    print(x, y)
+
+# traversing
+print('\n Traversing a dictionary')
+dict2 = {'r':'RED', 'g':'GREEN', 'b':'BLUE'}
+print(dict2)
+for item in dict2.items():
+    print(item)
+
 
 # using dict
-colordict = dict(r='RED', g='GREEN', b='BLUE')
-print(colordict)
+print('\n Create Dict using dict')
+dict3 = dict(r='RED', g='GREEN', b='BLUE')
+print(dict3)
 
 
 def print_keys(dict):
@@ -66,7 +90,8 @@ def get_rgb_map():
         2: 'BLUE',
     }
 
-person = build_person('Sumeet Sarkar', 28, 'Bangalore')
+
+person = build_person('DD Sharma', 30, 'Bangalore')
 print_person(person)
 
 rgb_map = get_rgb_map()
@@ -142,7 +167,7 @@ dict_traversal(vowel_dict)
 
 # Since, fromkeys V param is an object passed as reference to each key
 # Changing the V, updates the V in all
-person.update({'name': 'Sumeet'})
+person.update({'name': 'DD Sharma'})
 dict_traversal(vowel_dict)
 
 
